@@ -1,29 +1,22 @@
-set(CMAKE_PREFIX_PATH "C:\\Qt\\6.5.0\\mingw_64\\")
-set(QT_INSTALL_DIR "C:/Qt/6.5.0/mingw_64")
-
-file(COPY ${QT_INSTALL_DIR}/bin/Qt6Core.dll DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-file(COPY ${QT_INSTALL_DIR}/bin/Qt6Gui.dll DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-file(COPY ${QT_INSTALL_DIR}/bin/Qt6Widgets.dll DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-
-set(QT_INSTALL_DIR "C:/Qt/6.5.0/mingw_64/")
-
-set(QT_QPA_PLATFORM_PLUGIN_PATH "${QT_INSTALL_DIR}/plugins/platforms")
-
-set(PATH "$ENV{PATH};${QT_INSTALL_DIR}/bin")
-
-file(COPY ${QT_QPA_PLATFORM_PLUGIN_PATH}/qwindows.dll
-        DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/plugins/platforms)
-
-set(CMAKE_INSTALL_RPATH "${QT_INSTALL_DIR}/bin")
-
-if (WIN32)
-    set(CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP TRUE)
-    include(InstallRequiredSystemLibraries)
-endif()
-
 cmake_minimum_required(VERSION 3.5)
 
 project(Chess VERSION 0.1 LANGUAGES CXX)
+
+set(BUILD_DIRECTORY "${CMAKE_BINARY_DIR}")
+set(BUILD_BIN_DIRECTORY "${BUILD_DIRECTORY}/bin")
+set(BUILD_LIB_DIRECTORY "${BUILD_DIRECTORY}/lib")
+
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${BUILD_LIB_DIRECTORY}")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${BUILD_LIB_DIRECTORY}")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${BUILD_BIN_DIRECTORY}")
+
+if (CMAKE_SYSTEM_NAME STREQUAL "Windows" AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+    cmake_path(GET CMAKE_CXX_COMPILER PARENT_PATH COMPILER_DIRECTORY)
+
+    file(COPY "${COMPILER_DIRECTORY}/libgcc_s_seh-1.dll" DESTINATION "${BUILD_BIN_DIRECTORY}")
+    file(COPY "${COMPILER_DIRECTORY}/libstdc++-6.dll" DESTINATION "${BUILD_BIN_DIRECTORY}")
+    file(COPY "${COMPILER_DIRECTORY}/libwinpthread-1.dll" DESTINATION "${BUILD_BIN_DIRECTORY}")
+endif ()
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -32,8 +25,26 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
+if (CMAKE_SYSTEM_NAME STREQUAL "Windows")
+    get_target_property(QT_CORE_LIBRARY Qt6::Core IMPORTED_LOCATION)
+    get_target_property(QT_GUI_LIBRARY Qt6::Gui IMPORTED_LOCATION)
+    get_target_property(QT_WIDGETS_LIBRARY Qt6::Widgets IMPORTED_LOCATION)
+
+    file(COPY "${QT_CORE_LIBRARY}" DESTINATION "${BUILD_BIN_DIRECTORY}")
+
+    file(COPY "${QT_GUI_LIBRARY}" DESTINATION "${BUILD_BIN_DIRECTORY}")
+
+    file(COPY "${QT_WIDGETS_LIBRARY}" DESTINATION "${BUILD_BIN_DIRECTORY}")
+    cmake_path(GET QT_GUI_LIBRARY PARENT_PATH QT_BIN_DIRECTORY)
+    cmake_path(GET QT_BIN_DIRECTORY PARENT_PATH QT_DIRECTORY)
+    cmake_path(APPEND QT_PLUGINS_DIRECTORY "${QT_DIRECTORY}" "plugins")
+    cmake_path(APPEND QT_PLUGINS_PLATFORMS_DIRECTORY "${QT_PLUGINS_DIRECTORY}" "platforms")
+    cmake_path(APPEND QT_PLATFORM_LIBRARY "${QT_PLUGINS_PLATFORMS_DIRECTORY}" "qwindows.dll")
+    cmake_path(APPEND BUILD_BIN_PLUGINS_DIRECTORY "${BUILD_BIN_DIRECTORY}" "plugins")
+    cmake_path(APPEND BUILD_BIN_PLUGINS_PLATFORMS_DIRECTORY "${BUILD_BIN_PLUGINS_DIRECTORY}" "platforms")
+    file(COPY "${QT_PLATFORM_LIBRARY}" DESTINATION "${BUILD_BIN_PLUGINS_PLATFORMS_DIRECTORY}")
+endif ()
 
 set(PROJECT_SOURCES
         Chess/main.cpp
@@ -68,45 +79,11 @@ set(PROJECT_SOURCES
         Chess/Position.cpp
         )
 
-if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(Chess
-            MANUAL_FINALIZATION
-            ${PROJECT_SOURCES}
-            )
-    # Define target properties for Android with Qt 6 as:
-    #    set_property(TARGET Chess APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
-    #                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
-    # For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
-else()
-    if(ANDROID)
-        add_library(Chess SHARED
-                ${PROJECT_SOURCES}
-                )
-        # Define properties for Android with Qt 5 after find_package() calls as:
-        #    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
-    else()
-        add_executable(Chess
-                ${PROJECT_SOURCES}
-                )
-    endif()
-endif()
-
-target_link_libraries(Chess PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
-
-set_target_properties(Chess PROPERTIES
-        MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
-        MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
-        MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
-        MACOSX_BUNDLE TRUE
-        WIN32_EXECUTABLE TRUE
+qt_add_executable(Chess
+        MANUAL_FINALIZATION
+        ${PROJECT_SOURCES}
         )
 
-install(TARGETS Chess
-        BUNDLE DESTINATION .
-        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
+target_link_libraries(Chess PRIVATE Qt6::Core Qt6::Gui Qt6::Widgets)
 
-if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(Chess)
-endif()
-
-
+qt_finalize_executable(Chess)

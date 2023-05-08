@@ -1,5 +1,5 @@
 # CMake build directory
-cmake-build-debug/
+build/
 
 # CLion files
 .idea/
