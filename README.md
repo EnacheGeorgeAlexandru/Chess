@@ -1,4 +1,4 @@
-# Chess Qt GUI
+# C++/Qt Chess Game
 
 ## Screenshots:
 
@@ -8,31 +8,19 @@
 
 ## To get started:
 
-	* Clone the repository:
-
+* Clone the repository:
 ```
 git clone https://github.com/EnacheGeorgeAlexandru/Chess.git
 ```
+* Download Qt from: https://www.qt.io/download
 
-	* Download Qt: [Download Qt] (https://www.qt.io/download)
+* That's it. Build and run it with Qt Creator. Or if you're using a different IDE than Qt Creator, make sure to set __CMAKE_PREFIX_PATH__
+to the correct path of your Qt installation
 
-	* If you're using a different IDE than Qt Creator, make sure to set 
-
+    For example on __Windows__ with a usual Qt installation, this can be done by running:
 ```
-CMAKE_PREFIX_PATH
-```.
-
-	For example on Windows this can be done by 
-
+    cmake -DCMAKE_PREFIX_PATH="C:/Qt/6.5.0/mingw_64"
 ```
-cmake -DCMAKE_PREFIX_PATH="C:/Qt/6.5.0/mingw_64"
+    Or if you're using CMake bundled, add this to your IDE's CMake options:
 ```
-
-or if you're using CMake bundled, add 
-
-
-```
--DCMAKE_PREFIX_PATH="C:/Qt/6.5.0/mingw_64"
-```
-
-to your IDE's CMake options
+    -DCMAKE_PREFIX_PATH="C:/Qt/6.5.0/mingw_64"
