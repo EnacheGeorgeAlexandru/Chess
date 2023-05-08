@@ -1,0 +1,2078 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>18</width>
+    <height>18</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="board">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>50</y>
+      <width>400</width>
+      <height>400</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>5</horstretch>
+      <verstretch>5</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="res.qrc">:/Images/Img/board.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>50</y>
+      <width>401</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item row="0" column="4">
+      <widget class="QPushButton" name="e8">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/BlackKing.png</normaloff>:/Images/Img/BlackKing.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="4">
+      <widget class="QPushButton" name="e6">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="b8">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/BlackKnight.png</normaloff>:/Images/Img/BlackKnight.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="5">
+      <widget class="QPushButton" name="f5">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="5">
+      <widget class="QPushButton" name="f7">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/BlackPawn.png</normaloff>:/Images/Img/BlackPawn.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QPushButton" name="d8">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/BlackQueen.png</normaloff>:/Images/Img/BlackQueen.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="a6">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="a7">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/BlackPawn.png</normaloff>:/Images/Img/BlackPawn.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="5">
+      <widget class="QPushButton" name="f6">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="b7">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/BlackPawn.png</normaloff>:/Images/Img/BlackPawn.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="7">
+      <widget class="QPushButton" name="h8">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/BlackRook.png</normaloff>:/Images/Img/BlackRook.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QPushButton" name="d7">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/BlackPawn.png</normaloff>:/Images/Img/BlackPawn.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="a5">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QPushButton" name="a2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent;
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/WhitePawn.png</normaloff>:/Images/Img/WhitePawn.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="5">
+      <widget class="QPushButton" name="f8">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/BlackBishop.png</normaloff>:/Images/Img/BlackBishop.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="c7">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/BlackPawn.png</normaloff>:/Images/Img/BlackPawn.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="4">
+      <widget class="QPushButton" name="e5">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent;
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="c8">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/BlackBishop.png</normaloff>:/Images/Img/BlackBishop.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="4">
+      <widget class="QPushButton" name="e7">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/BlackPawn.png</normaloff>:/Images/Img/BlackPawn.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="c6">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="b6">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QPushButton" name="a3">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent;
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QPushButton" name="c4">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="6">
+      <widget class="QPushButton" name="g8">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/BlackKnight.png</normaloff>:/Images/Img/BlackKnight.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="a8">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/BlackRook.png</normaloff>:/Images/Img/BlackRook.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QPushButton" name="c5">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QPushButton" name="d5">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QPushButton" name="d6">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QPushButton" name="a4">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QPushButton" name="a1">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent;
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/WhiteRook.png</normaloff>:/Images/Img/WhiteRook.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QPushButton" name="b1">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent;
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/WhiteKnight.png</normaloff>:/Images/Img/WhiteKnight.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QPushButton" name="b2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent;
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/WhitePawn.png</normaloff>:/Images/Img/WhitePawn.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QPushButton" name="b3">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent;
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QPushButton" name="b4">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QPushButton" name="b5">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="2">
+      <widget class="QPushButton" name="c3">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent;
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="2">
+      <widget class="QPushButton" name="c2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent;
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/WhitePawn.png</normaloff>:/Images/Img/WhitePawn.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="2">
+      <widget class="QPushButton" name="c1">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent;
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/WhiteBishop.png</normaloff>:/Images/Img/WhiteBishop.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <widget class="QPushButton" name="d4">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="3">
+      <widget class="QPushButton" name="d3">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent;
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="3">
+      <widget class="QPushButton" name="d2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent;
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/WhitePawn.png</normaloff>:/Images/Img/WhitePawn.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="3">
+      <widget class="QPushButton" name="d1">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent;
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/WhiteQueen.png</normaloff>:/Images/Img/WhiteQueen.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="4">
+      <widget class="QPushButton" name="e4">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent;
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="4">
+      <widget class="QPushButton" name="e3">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent;
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="4">
+      <widget class="QPushButton" name="e2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent;
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/WhitePawn.png</normaloff>:/Images/Img/WhitePawn.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="4">
+      <widget class="QPushButton" name="e1">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent;
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/WhiteKing.png</normaloff>:/Images/Img/WhiteKing.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="5">
+      <widget class="QPushButton" name="f4">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="5">
+      <widget class="QPushButton" name="f3">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="5">
+      <widget class="QPushButton" name="f2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/WhitePawn.png</normaloff>:/Images/Img/WhitePawn.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="5">
+      <widget class="QPushButton" name="f1">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/WhiteBishop.png</normaloff>:/Images/Img/WhiteBishop.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="6">
+      <widget class="QPushButton" name="g7">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/BlackPawn.png</normaloff>:/Images/Img/BlackPawn.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="7">
+      <widget class="QPushButton" name="h7">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/BlackPawn.png</normaloff>:/Images/Img/BlackPawn.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="6">
+      <widget class="QPushButton" name="g6">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="7">
+      <widget class="QPushButton" name="h6">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="6">
+      <widget class="QPushButton" name="g5">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="7">
+      <widget class="QPushButton" name="h5">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="6">
+      <widget class="QPushButton" name="g4">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="7">
+      <widget class="QPushButton" name="h4">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="6">
+      <widget class="QPushButton" name="g3">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="7">
+      <widget class="QPushButton" name="h3">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="6">
+      <widget class="QPushButton" name="g2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/WhitePawn.png</normaloff>:/Images/Img/WhitePawn.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="7">
+      <widget class="QPushButton" name="h2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/WhitePawn.png</normaloff>:/Images/Img/WhitePawn.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="6">
+      <widget class="QPushButton" name="g1">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/WhiteKnight.png</normaloff>:/Images/Img/WhiteKnight.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="7">
+      <widget class="QPushButton" name="h1">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+background-color: transparent; 
+border: none; 
+outline: none; 
+}</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/Images/Img/WhiteRook.png</normaloff>:/Images/Img/WhiteRook.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>500</width>
+     <height>17</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
