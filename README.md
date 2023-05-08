@@ -2,4 +2,4 @@
 
 ## Screenshots:
 
-![Failed to load image](.git/ReadmeResources/readmeimg1.png "Mikhail Tal-Alexander Koblents,1957")
+![Failed to load image](Screenshots/readmeimg1.png "Mikhail Tal-Alexander Koblents,1957")
