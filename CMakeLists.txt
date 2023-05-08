@@ -84,6 +84,10 @@ qt_add_executable(Chess
         ${PROJECT_SOURCES}
         )
 
+if (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
+    target_compile_options("Chess" PRIVATE "/Zc:__cplusplus")
+endif ()
+
 target_link_libraries(Chess PRIVATE Qt6::Core Qt6::Gui Qt6::Widgets)
 
 qt_finalize_executable(Chess)
